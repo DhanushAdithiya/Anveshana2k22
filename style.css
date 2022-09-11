@@ -1,6 +1,18 @@
 @import url("reset.css");
+@import url(footer.css);
+@import url('table.css');
+
 
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;400;500;800&display=swap");
+
+:root {
+  --main-text: white;
+  --grey-contrast: #8a8685;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
 
 /* .background {
   aspect-ratio: 940/540;
@@ -29,7 +41,7 @@
   align-items: center;
   justify-content: center;
   flex-direction:
-} */
+} 
 
 .container {
   height: 100vh;
@@ -50,7 +62,7 @@
   z-index: 1;
 }
 
-/* EXTRA */
+/* EXTRA 
 
 .content {
   width: 100%;
@@ -97,4 +109,235 @@
   z-index: 0;
   bottom: 5%;
   left: 9%;
+}
+*/
+
+.container {
+  height: 100vh;
+}
+
+.container img {
+  position: absolute;
+  width: 100%;
+  height: 110vh;
+  aspect-ratio: 16/9;
+}
+
+.heading h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  text-align: center;
+  z-index: 20;
+  color: var(--main-text);
+  font-size: 8vw;
+}
+
+.par-mount {
+  z-index: 21;
+}
+
+.heading a {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  z-index: 99;
+  text-decoration: none;
+  color: var(--grey-contrast);
+  background-color: rgb(219, 214, 214);
+  padding: 0.2em;
+  border-radius: 40px;
+  font-size: 4vw;
+  width: 30%;
+  text-align: center;
+}
+
+.heading a:hover {
+  background-color: white;
+  transition: 0.5s;
+}
+
+nav a,
+ul {
+  text-decoration: none;
+  list-style: none;
+  /* margin: 1em 1em; */
+  font-size: 2vw;
+  color: var(--main-text);
+}
+
+nav {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+nav li {
+  margin: 0 2em;
+  padding: 1em;
+}
+
+nav a:hover {
+  font-weight: bold;
+}
+
+a::before {
+  display: block;
+  content: attr(title);
+  font-weight: bold;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.download {
+  background-color: rgb(208, 206, 206);
+  padding: 1em;
+  border-radius: 30px;
+}
+
+.broch {
+  color: #69b1b0;
+}
+
+.download:hover {
+  background-color: white;
+  font-weight: bold;
+  transition: background 0.5s;
+}
+
+.scroll-down {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -120%);
+  z-index: 200;
+  font-size: 20px;
+  color: #4e4c4b;
+  /* font-weight: 300; */
+}
+
+.about-page {
+  background: url("cropped-mtn.png")
+    no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  height: 57vh;
+}
+
+.color-olay {
+  width: 100%;
+  height: 100%;
+  background-color: #15307079;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.about-page h1 {
+  text-align: center;
+  color: var(--main-text);
+  font-size: 8vw;
+  position: relative;
+  z-index: 2;
+  text-decoration: underline 8px;
+  text-underline-offset: 0.4em;
+}
+
+.about-page p {
+  width: 100%;
+  display: flex;
+  position: relative;
+  color: var(--main-text);
+  z-index: 2;
+  text-align: center;
+  padding: 2em;
+  font-size: 1wh;
+
+}
+
+.about-text {
+  /*margin-top: 3em;*/
+  width: 100%;
+  height:  80%;
+  /*margin: em 0;*/
+  display: flex;
+  margin:  4em 0;
+}
+
+.event-l
+
+
+.about-content {
+  height: 100%;
+  padding: 2em;
+  width: 80%;
+  margin: auto auto;
+}
+
+.white-line-full {
+  background-color: var(--main-text);
+  width: 100%;
+  height: 10px;
+}
+
+.white-line-half {
+  background-color: var(--main-text);
+  width: 60%;
+  height: 10px;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-50%, -50%);
+}
+
+
+/*MEDIA QUERIES*/
+
+@media screen and (min-width: 931px) {
+  .heading a {
+     font-size: 2vw;
+     width: 20% ;
+  }
+
+  nav a, ul {
+    font-size: 1em;
+  }
+
+  .about-page h1 {
+    font-size: 80px;
+  }
+
+  .about-content p {
+      font-size: 20px;
+  }
+}
+
+
+
+@media screen and (max-width:  500px) {
+  .about-text  {
+    font-size: 3vw;
+    margin:  0 0;
+  }
+
+  .about-page {
+    height: 57vh;
+  }
+
+  .about-content {
+    padding: 1em;
+  }
+
 }

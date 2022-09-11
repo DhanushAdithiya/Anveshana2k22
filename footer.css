@@ -1,0 +1,115 @@
+.container-fot {
+  background: black;
+  width: 100%;
+  max-width: 1080px;
+  border-radius: 15px;
+  margin: 0 auto;
+  /* margin-top: 50px; */
+  padding: 40px;
+  /* box-shadow: #cfd9f6 0 10px 10px; */
+  position: relative;
+  overflow: hidden;
+}
+
+.container-fot p,
+a,
+li {
+  color: white;
+}
+
+.container-fot a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo {
+  width: 100%;
+  text-align: center;
+}
+
+.logo img {
+  width: 45%;
+  margin: 0 auto;
+}
+
+.main {
+  display: flex;
+  gap: 50px;
+  margin: 50px 0;
+}
+.col1 {
+  flex: 2;
+}
+.col2 {
+  flex: 2;
+}
+.col3 {
+  flex: 3;
+}
+.heading {
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: underline 2px;
+  text-underline-offset: 0.5em;
+}
+.main a {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 5px 0;
+  /* color: black; */
+}
+.main a:hover {
+  color: #284dd9;
+}
+
+.forums {
+  display: flex;
+  margin-top: 1em;
+}
+
+.partner-logo {
+  width: 30%;
+  margin: 1em;
+}
+
+.nucleus {
+  /* border: 5px solid white; */
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.copyright {
+  color: gray;
+}
+.policy a {
+  /* color: black; */
+  margin-left: 20px;
+}
+
+.circle {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  border: solid 2px #d2dcf7;
+}
+.c1 {
+  top: -600px;
+  left: -500px;
+}
+.c2 {
+  bottom: -600px;
+  right: -200px;
+}
+.c3 {
+  bottom: -400px;
+  right: -500px;
+}
+
+.footer {
+  background-color: black;
+}
