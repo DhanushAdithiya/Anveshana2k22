@@ -79,11 +79,13 @@ li {
 
 .bottom {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+  justify-content: center;
 }
 .copyright {
   color: gray;
+  text-align: center;
+  width: 100%;
 }
 .policy a {
   /* color: black; */
@@ -112,4 +114,40 @@ li {
 
 .footer {
   background-color: black;
+}
+
+@media screen and (max-width: 612px) {
+  .col1 p,
+  .col2 p,
+  .col3 p {
+    font-size: 4vw;
+  }
+
+  .col1 a,
+  .col2 a,
+  .col3 a {
+    font-size: 3vw;
+  }
+
+  .main {
+    display: flex;
+    gap: 20px;
+    margin: 50px 0;
+  }
+
+  .col1 ul,
+  .col2 ul,
+  .col3 ul {
+    padding: 0;
+  }
+
+  .partner-logo {
+    width: 50%;
+    margin: 0;
+  }
+
+  .forums {
+    display: flex;
+    flex-direction: column;
+  }
 }

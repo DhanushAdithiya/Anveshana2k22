@@ -1,7 +1,6 @@
 @import url("reset.css");
-@import url(footer.css);
-@import url('table.css');
-
+@import url("footer.css");
+@import url("table.css");
 
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;400;500;800&display=swap");
 
@@ -10,124 +9,43 @@
   --grey-contrast: #8a8685;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
 body::-webkit-scrollbar {
   display: none;
 }
 
-/* .background {
-  aspect-ratio: 940/540;
-  width: 100%;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+section {
+  overflow: hidden;
 }
-
-.heading h1 {
-  color: black;
-  text-align: center;
-  font-size: 80px;
-  /* margin-bottom: 200px; 
-}
-
-.heading p {
-  color: black;
-  font-size: 50px;
-  text-align: center;
-}
-
-.hero-landing {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction:
-} 
 
 .container {
   height: 100vh;
-}
-.wave {
-  width: 100%;
-  position: absolute;
-  height: 110vh;
-  object-fit: cover;
-}
-.main-title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 1rem;
-  transform: translate(-50%, -50%);
-  color: white;
-  z-index: 1;
-}
-
-/* EXTRA 
-
-.content {
-  width: 100%;
-  background: rgb(24, 24, 24);
-  min-height: 100vh;
-  z-index: 2;
-  position: absolute;
-}
-.content-images {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 60vh;
-  text-align: center;
-}
-
-.text {
-  padding: 2rem 20rem;
-  font-size: 1.1rem;
-}
-
-.red {
-  z-index: 1;
-}
-
-.yellow {
-  z-index: 2;
-}
-
-.bg {
-  z-index: -1;
-}
-
-.bg2 {
-  background-image: url(img/curves/wave-haikei.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.graphic {
-  width: 30%;
-  position: absolute;
-  z-index: 0;
-  bottom: 5%;
-  left: 9%;
-}
-*/
-
-.container {
-  height: 100vh;
+  overflow-x: hidden;
 }
 
 .container img {
   position: absolute;
-  width: 100%;
-  height: 110vh;
-  aspect-ratio: 16/9;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.landing-img {
+  position: absolute;
+  width: 190%;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
 .heading h1 {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -70%);
+  top: 15%;
+  left: 20%;
   text-align: center;
   z-index: 20;
   color: var(--main-text);
@@ -140,9 +58,9 @@ body::-webkit-scrollbar {
 
 .heading a {
   position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -10%);
+  top: 18%;
+  left: 39%;
+
   z-index: 99;
   text-decoration: none;
   color: var(--grey-contrast);
@@ -176,12 +94,13 @@ nav {
 
 nav ul {
   display: flex;
-  justify-content: flex-end;
-  width: 100%;
+  justify-content: center;
+  width: 90%;
+  text-align: center;
 }
 
 nav li {
-  margin: 0 2em;
+  /* margin: 0 2em; */
   padding: 1em;
 }
 
@@ -216,9 +135,9 @@ a::before {
 
 .scroll-down {
   position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%, -120%);
+  top: 30%;
+  left: 47%;
+
   z-index: 200;
   font-size: 20px;
   color: #4e4c4b;
@@ -226,8 +145,7 @@ a::before {
 }
 
 .about-page {
-  background: url("cropped-mtn.png")
-    no-repeat;
+  background: url("img/cropped-mtn.png") no-repeat;
   background-position: bottom;
   background-size: cover;
   background-attachment: fixed;
@@ -261,28 +179,17 @@ a::before {
   color: var(--main-text);
   z-index: 2;
   text-align: center;
-  padding: 2em;
+  padding: 2.9em;
   font-size: 1wh;
-
 }
 
 .about-text {
   /*margin-top: 3em;*/
   width: 100%;
-  height:  80%;
+  /* height: 20%; */
   /*margin: em 0;*/
   display: flex;
-  margin:  4em 0;
-}
-
-.event-l
-
-
-.about-content {
-  height: 100%;
-  padding: 2em;
-  width: 80%;
-  margin: auto auto;
+  margin: 1em 0;
 }
 
 .white-line-full {
@@ -302,17 +209,43 @@ a::before {
   transform: translate(-50%, -50%);
 }
 
-
 /*MEDIA QUERIES*/
 
 @media screen and (min-width: 931px) {
-  .heading a {
-     font-size: 2vw;
-     width: 20% ;
+  .container {
+    height: 100vh;
   }
 
-  nav a, ul {
-    font-size: 1em;
+  .container img {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .landing-img {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .heading a {
+    font-size: 2vw;
+    width: 20%;
+  }
+
+  nav a,
+  ul {
+    font-size: 1.1em;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  nav li {
+    margin: 0 1em;
   }
 
   .about-page h1 {
@@ -320,16 +253,19 @@ a::before {
   }
 
   .about-content p {
-      font-size: 20px;
+    font-size: 20px;
+  }
+
+  .heading h1 {
+    top: 10%;
+    left: 23.2%;
   }
 }
 
-
-
-@media screen and (max-width:  500px) {
-  .about-text  {
+@media screen and (max-width: 500px) {
+  .about-text {
     font-size: 3vw;
-    margin:  0 0;
+    margin: 0 0;
   }
 
   .about-page {
@@ -339,5 +275,4 @@ a::before {
   .about-content {
     padding: 1em;
   }
-
 }
