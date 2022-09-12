@@ -7,6 +7,53 @@
     <title>Anveshana</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="#" />
+    <style type="text/css" media="print">
+      div.no_print {
+        display: none;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.12.3.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#mytable").DataTable();
+      });
+    </script>
+
+    <script>
+      function addRow(tableID) {
+        var tbl = document.getElementById(tableID);
+        var rws = tbl.rows;
+        var lst = rws[rws.length - 1];
+        var cls = lst.cells.length;
+
+        var ro = tbl.insertRow(1); // добавляем снизу ОБРАЗ ещё одной строки
+        for (
+          var j = 0;
+          j < cls;
+          j++ // создаём цикл из cls шагов (по количеству ячеек)
+        ) {
+          var ce = ro.insertCell(-1); // на каждом шаге в образ строки добавляем ОБРАЗ новой ячейки
+          ce.innerHTML = "something";
+        }
+      }
+      function print_() {
+        window.print();
+      }
+    </script>
   </head>
   <body>
     <section id="home">
@@ -17,7 +64,9 @@
               <a href="#about" class="menu-link" title="About">About</a>
             </li>
             <li>
-              <a href="#fot" class="menu-link" title="Contact Us">Contact Us</a>
+              <a href="event.html" class="menu-link" title="Contact Us"
+                >Contact Us</a
+              >
             </li>
             <li class="download">
               <a href="#" class="menu-link broch" title="Download Borchure"
@@ -107,44 +156,17 @@
       </div>
     </div>
     <div class="event-page" id="event-list-page">
-      <h1 class="event">EVENT LIST</h1>
-      <div class="event-list">
-        <table class="table-cont">
-          <thead>
-            <tr>
-              <th><h1>Event</h1></th>
-              <th><h1>Hosted By</h1></th>
-              <th><h1>Date</h1></th>
-              <th><h1>Time</h1></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Event 1</td>
-              <td>avb</td>
-              <td>sdf</td>
-              <td>cvb</td>
-            </tr>
-            <tr>
-              <td>Event 1</td>
-              <td>avb</td>
-              <td>sdf</td>
-              <td>cvb</td>
-            </tr>
-            <tr>
-              <td>Event 1</td>
-              <td>avb</td>
-              <td>sdf</td>
-              <td>cvb</td>
-            </tr>
-            <tr>
-              <td>Event 1</td>
-              <td>avb</td>
-              <td>sdf</td>
-              <td>cvb</td>
-            </tr>
-          </tbody>
-        </table>
+      <h1 class="promo">PROMO VIDEO</h1>
+      <div class="iframe-container">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/MtBYsmiNF2U"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
 

@@ -1,0 +1,296 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="css/paginated-table.css" />
+    <style type="text/css" media="print">
+      div.no_print {
+        display: none;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.12.3.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#mytable").DataTable();
+      });
+    </script>
+
+    <script>
+      function addRow(tableID) {
+        var tbl = document.getElementById(tableID);
+        var rws = tbl.rows;
+        var lst = rws[rws.length - 1];
+        var cls = lst.cells.length;
+
+        var ro = tbl.insertRow(1); // добавляем снизу ОБРАЗ ещё одной строки
+        for (
+          var j = 0;
+          j < cls;
+          j++ // создаём цикл из cls шагов (по количеству ячеек)
+        ) {
+          var ce = ro.insertCell(-1); // на каждом шаге в образ строки добавляем ОБРАЗ новой ячейки
+          ce.innerHTML = "something";
+        }
+      }
+      function print_() {
+        window.print();
+      }
+    </script>
+  </head>
+  <body>
+    <table id="mytable" class="display">
+      <thead>
+        <tr>
+          <td><b>Event Name</b></td>
+          <td><b>Category</b></td>
+          <td><b>Hosted By</b></td>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <td><b>Event Name</b></td>
+          <td><b>Category</b></td>
+          <td><b>Hosted By</b></td>
+        </tr>
+      </tfoot>
+      <tr>
+        <td>Event Name</td>
+        <td>Category</td>
+        <td>Event Host</td>
+      </tr>
+      <tr>
+        <td>Mr. &amp; Ms. Anveshana</td>
+        <td>Comedy</td>
+        <td>The Comedy Club</td>
+      </tr>
+      <tr>
+        <td>Solo Classical Dance</td>
+        <td>Dance</td>
+        <td>Amokha - The Indian Dance Team</td>
+      </tr>
+      <tr>
+        <td>Solo Western Dance</td>
+        <td>Dance</td>
+        <td>Entropy - The Western Dance Team</td>
+      </tr>
+      <tr>
+        <td>Best Manager</td>
+        <td>Business &amp; Management</td>
+        <td>Midas - The Business Club</td>
+      </tr>
+      <tr>
+        <td>Runway Rockstar</td>
+        <td>Fashion</td>
+        <td>Tarashana - The Fashion Team</td>
+      </tr>
+      <tr>
+        <td>Ready, Tech, Go</td>
+        <td>Technicals &amp; Digital Arts</td>
+        <td>8-bit - The Technical Club</td>
+      </tr>
+      <tr>
+        <td>Blood &amp; Body Works</td>
+        <td>Science</td>
+        <td>Crestas - The Forensic Science Forum</td>
+      </tr>
+      <tr>
+        <td>Instrumentals+Beatbox+Rap</td>
+        <td>Music</td>
+        <td>Arohi - The Music Club</td>
+      </tr>
+      <tr>
+        <td>Indian Solo Singing</td>
+        <td>Music</td>
+        <td>Arohi - The Music Club</td>
+      </tr>
+      <tr>
+        <td>Western Solo Singing</td>
+        <td>Music</td>
+        <td>Arohi - The Music Club</td>
+      </tr>
+      <tr>
+        <td>Solo Indian Dance</td>
+        <td>Dance</td>
+        <td>Amokha - The Indian Dance Team</td>
+      </tr>
+      <tr>
+        <td>Dance Battle</td>
+        <td>Dance</td>
+        <td>Entropy - The Western Dance Team</td>
+      </tr>
+      <tr>
+        <td>Improp!</td>
+        <td>Theatre</td>
+        <td>Damaruga - The Drama Club</td>
+      </tr>
+      <tr>
+        <td>Improv</td>
+        <td>Comedy</td>
+        <td>The Comedy Club</td>
+      </tr>
+      <tr>
+        <td>B-Plan</td>
+        <td>Business &amp; Management</td>
+        <td>Midas - The Business Club</td>
+      </tr>
+      <tr>
+        <td>IPL Auction</td>
+        <td>Business &amp; Management</td>
+        <td>Midas - The Business Club &amp; 8-bit - The Technical Club</td>
+      </tr>
+      <tr>
+        <td>Protagonist Time!</td>
+        <td>Speaking &amp; Literary Arts</td>
+        <td>Etherea - The English Forum</td>
+      </tr>
+      <tr>
+        <td>Vocal wars</td>
+        <td>Speaking &amp; Literary Arts</td>
+        <td>Aritram - The Emcee &amp; Debate Club</td>
+      </tr>
+      <tr>
+        <td>Poster Making</td>
+        <td>Technicals &amp; Digital Arts</td>
+        <td>8-bit - The Technical Club</td>
+      </tr>
+      <tr>
+        <td>On Spot Photography</td>
+        <td>Technicals &amp; Digital Arts</td>
+        <td>Macrographia - The Photography Club</td>
+      </tr>
+      <tr>
+        <td>Import Scanner</td>
+        <td>Science</td>
+        <td>RECAMP - The Physical Science Forum</td>
+      </tr>
+      <tr>
+        <td>Quizzora</td>
+        <td>Science</td>
+        <td>RECAMP - The Physical Science Forum</td>
+      </tr>
+      <tr>
+        <td>CodeX</td>
+        <td>Science</td>
+        <td>Datum - The Data Science Forum</td>
+      </tr>
+      <tr>
+        <td>MicroSeek</td>
+        <td>Science</td>
+        <td>Nucleus - The Science Forum</td>
+      </tr>
+      <tr>
+        <td>Do Your Art!</td>
+        <td>Fine Arts</td>
+        <td>The Department of Decor</td>
+      </tr>
+      <tr>
+        <td>Cleopatra's Jewel</td>
+        <td>Fashion</td>
+        <td>Tarashana - The Fashion Team</td>
+      </tr>
+      <tr>
+        <td>Palm Painting</td>
+        <td>Fine Arts</td>
+        <td>The Department of Decor</td>
+      </tr>
+      <tr>
+        <td>Artistic Waste</td>
+        <td>Fine Arts</td>
+        <td>Vasudha - The Women's Cell</td>
+      </tr>
+      <tr>
+        <td>Digital Marketing</td>
+        <td>Business &amp; Management</td>
+        <td>Midas - The Business Club</td>
+      </tr>
+      <tr>
+        <td>Capture the Flag</td>
+        <td>Speaking &amp; Literary Arts</td>
+        <td>Kannada Vedike - The Kannada Forum</td>
+      </tr>
+      <tr>
+        <td>Hindi Crosswords</td>
+        <td>Speaking &amp; Literary Arts</td>
+        <td>Karvaan - The Hindi Forum</td>
+      </tr>
+      <tr>
+        <td>Match It!</td>
+        <td>Speaking &amp; Literary Arts</td>
+        <td>Prajna - The Sanskrit Forum</td>
+      </tr>
+      <tr>
+        <td>FIFA</td>
+        <td>Technicals &amp; Digital Arts</td>
+        <td>8-bit - The Technical Club</td>
+      </tr>
+      <tr>
+        <td>Talash 2.0</td>
+        <td>Science</td>
+        <td>Genesis - The Life Sciences Forum</td>
+      </tr>
+      <tr>
+        <td>Shades of an act</td>
+        <td>Theatre</td>
+        <td>Damaruga - The Drama Club</td>
+      </tr>
+      <tr>
+        <td>Meme Making</td>
+        <td>Comedy</td>
+        <td>The Comedy Club</td>
+      </tr>
+      <tr>
+        <td>House the Bottles</td>
+        <td>Science</td>
+        <td>Caarma - The Eco Club</td>
+      </tr>
+      <tr>
+        <td>9 Squared</td>
+        <td>Science</td>
+        <td>RECAMP - The Physical Science Forum</td>
+      </tr>
+      <tr>
+        <td>Memethon</td>
+        <td>Science</td>
+        <td>Catalysta - The Chemistry Forum</td>
+      </tr>
+      <tr>
+        <td>Pass the Baton</td>
+        <td>Science</td>
+        <td>Genesis - The Life Sciences Forum</td>
+      </tr>
+      <tr>
+        <td>It's Debatable</td>
+        <td>Science</td>
+        <td>Datum - The Data Science Forum</td>
+      </tr>
+      <tr>
+        <td>Hunch it out!</td>
+        <td>Science</td>
+        <td>Crestas - The Forensic Science Forum</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Science</td>
+        <td>Creatives</td>
+      </tr>
+      <tr>
+        <td>Reel making</td>
+        <td>Technical and Digital Arts</td>
+        <td>Macrographia - The Photography Forum</td>
+      </tr>
+    </table>
+    <hr />
+  </body>
+</html>
